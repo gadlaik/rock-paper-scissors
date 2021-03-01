@@ -8,14 +8,38 @@
     <title>Rock, Paper, Scissors</title>
   </head>
   <body>
+    <!-- title -->
+    <h1>Rock Paper Scissors</h1>
+    <h2>Select:</h2>
+
+    <!-- selection -->
     <div class="container">
       <div id="rock">Rock</div>
       <div id="paper">Papaer</div>
       <div id="scissors">Scissors</div>
     </div>
+
+    <!-- pc selected -->
+    <h3 id="pcSelected"></h3>
+
+    <!-- results -->
     <div class="result">
+      <div id="result">Result</div>
       <div id="won">You won!</div>
       <div id="lost">You lost.</div>
+      <div id="draw">Draw</div>
+    </div>
+
+    <!-- scoreboard -->
+    <div id="scoreboard">
+      <div id="you">
+        <h3>You:</h3>
+        <h2 id="yourScore"></h2>
+      </div>
+      <div id="computer">
+        <h3>Machine:</h3>
+        <h2 id="pcScore"></h2>
+      </div>
     </div>
     <script src="./script.js"></script>
   </body>

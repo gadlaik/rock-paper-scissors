@@ -1,21 +1,37 @@
+body {
+  font-family: sans-serif;
+}
+
+/* titles */
+h1,
+h2 {
+  text-align: center;
+}
+h2 {
+  margin-top: 40px;
+}
+
+/* choices */
 .container {
   display: grid;
-  grid-template-columns: repeat(3, auto);
+  grid-template-columns: repeat(3, 150px);
   justify-content: center;
   gap: 10px;
-  margin-top: 42px;
+  margin-top: -10px;
   text-align: center;
 }
 #rock,
 #paper,
 #scissors,
 #won,
-#lost {
-  padding: 15px 50px;
+#lost,
+#draw,
+#result {
+  padding: 15px 0px;
   font-size: 18px;
   font-weight: 700;
-  font-family: sans-serif;
   cursor: pointer;
+  border-radius: 3px;
 }
 #rock {
   background-color: gray;
@@ -27,6 +43,7 @@
 #scissors {
   background-color: silver;
 }
+
 /* results */
 .result {
   display: flex;
@@ -34,9 +51,14 @@
   margin-top: 50px;
 }
 #won,
-#lost {
+#lost,
+#draw,
+#result {
   display: none;
   position: absolute;
+  width: 150px;
+  text-align: center;
+  cursor: default;
 }
 #won {
   background-color: limegreen;
@@ -44,4 +66,34 @@
 }
 #lost {
   background-color: red;
+}
+#draw {
+  background-color: #ee0;
+}
+#result {
+  display: block;
+  background-color: #000;
+  color: white;
+}
+
+/* pc selected */
+#pcSelected {
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: -42px;
+  height: 20px;
+}
+
+/* scoreboard */
+#scoreboard {
+  display: grid;
+  grid-template-columns: repeat(2, 100px);
+  justify-content: center;
+  transform: translateY(55px);
+  text-align: center;
+  grid-gap: 15px;
+}
+#you,
+#computer {
+  transform: translateX(-10px);
 }
