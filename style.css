@@ -95,5 +95,21 @@ h2 {
 }
 #you,
 #computer {
-  transform: translateX(-10px);
+  transform: translateX(-5px);
+}
+
+/* again */
+#again {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  transform: translateY(42px);
+  display: none;
+}
+#again h2 {
+  padding: 14px;
+  border-radius: 3px;
+  width: 125px;
+  background-color: cyan;
+  cursor: pointer;
 }
