@@ -28,10 +28,7 @@ choices.addEventListener("click", (e) => {
 
   result.style.display = "none";
 
-  if (playerScore == 5 || computerScore == 5) {
-    selectedTarget = null;
-    btns.forEach((btn) => (btn.style.cursor = "default"));
-  }
+  if (playerScore == 5 || computerScore == 5) selectedTarget = null;
 
   switch (selectedTarget) {
     case "rock":
@@ -95,7 +92,10 @@ choices.addEventListener("click", (e) => {
       }
       break;
   }
-  if (playerScore == 5 || computerScore == 5) again.style.display = "flex";
+  if (playerScore == 5 || computerScore == 5) {
+    again.style.display = "flex";
+    btns.forEach((btn) => (btn.style.cursor = "default"));
+  }
 });
 
 // again button even listener
@@ -108,4 +108,5 @@ again.addEventListener("click", (e) => {
   draw.style.display = "none";
   result.style.display = "block";
   again.style.display = "none";
+  btns.forEach((btn) => (btn.style.cursor = "pointer"));
 });
